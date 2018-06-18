@@ -931,24 +931,24 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="233" name="content">
+    <column id="235" parent="233" name="endDate">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>datetime|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="233" name="date">
+    <column id="236" parent="233" name="location">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="233" name="time">
+    <column id="237" parent="233" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="233" name="title">
+    <column id="238" parent="233" name="startDate">
       <Position>5</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>datetime|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="239" parent="233" name="PRIMARY">

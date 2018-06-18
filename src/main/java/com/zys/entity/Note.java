@@ -1,6 +1,10 @@
 package com.zys.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "t_note")
@@ -11,14 +15,15 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String title;
+    private String name;
 
-    private String date;
+    private String location;
 
-    private String time;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date startDate;
 
-    private String content;
-
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date endDate;
 
     public int getId() {
         return id;
@@ -28,46 +33,46 @@ public class Note {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDate() {
-        return date;
+    public String getLocation() {
+        return location;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public String getTime() {
-        return time;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public String getContent() {
-        return content;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     @Override
     public String toString() {
         return "Note{" +
-                "title='" + title + '\'' +
-                ", date='" + date + '\'' +
-                ", time='" + time + '\'' +
-                ", content='" + content + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
                 '}';
     }
-
 }

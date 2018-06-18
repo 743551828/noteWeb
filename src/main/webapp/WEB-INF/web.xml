@@ -31,7 +31,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     <servlet>
-        <servlet-name>tea</servlet-name>
+        <servlet-name>noteWeb</servlet-name>
         <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
         </servlet-class>
@@ -43,7 +43,7 @@
 
     </servlet>
     <servlet-mapping>
-        <servlet-name>tea</servlet-name>
+        <servlet-name>noteWeb</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>

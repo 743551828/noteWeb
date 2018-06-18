@@ -6,6 +6,8 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class NoteDao {
 
@@ -20,4 +22,16 @@ public class NoteDao {
         getSession().save(note);
     }
 
+    public List findDataSource(){
+        String hql="from Note ";
+        return getSession().createQuery(hql).list();
+    }
+
+    public void update(Note note){
+        getSession().update(note);
+    }
+
+    public void delete(Note note){
+        getSession().delete(note);
+    }
 }
