@@ -23,7 +23,7 @@
 <body>
 <article class="jq22-container">
     <header class="jq22-header">
-        <h1>基于Bootstrap3的带记事功能的全年日历插件 <span>A fully customizable year calendar widget, for boostrap</span></h1>
+        <h1>带记事功能的全年日历 <span>A fully customizable year calendar</span></h1>
     </header>
     <div id="calendar"></div>
 </article>

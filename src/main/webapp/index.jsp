@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基于Bootstrap3的带记事功能的全年日历插件</title>
+    <title>带记事功能的全年日历</title>
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-year-calendar.min.css">
@@ -23,7 +23,7 @@
 <body>
 <article class="jq22-container">
     <header class="jq22-header">
-        <h1>基于Bootstrap3的带记事功能的全年日历插件 <span>A fully customizable year calendar widget, for boostrap</span></h1>
+        <h1>带记事功能的全年日历 <span>A fully customizable year calendar</span></h1>
     </header>
     <div id="calendar"></div>
 </article>
