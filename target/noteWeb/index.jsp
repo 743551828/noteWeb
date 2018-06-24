@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基于Bootstrap3的带记事功能的全年日历插件</title>
+    <title>带记事功能的全年日历</title>
+    <link rel="stylesheet" type="text/css" href="css/audio.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-year-calendar.min.css">
+
     <style type="text/css">
         #calendar {
             width: 100%;
@@ -19,8 +21,9 @@
     <!--[if IE]>
     <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
+
 </head>
-<body>
+<body style="height: 588px">
 <article class="jq22-container">
     <header class="jq22-header">
         <h1>带记事功能的全年日历 <span>A fully customizable year calendar</span></h1>
@@ -74,8 +77,51 @@
         </div>
     </div>
 </div>
-
-<script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+<div class="audio-box">
+    <div class="audio-container">
+        <div class="audio-cover"></div>
+        <div class="audio-view">
+            <h3 class="audio-title">未知歌曲</h3>
+            <div class="audio-body">
+                <div class="audio-backs">
+                    <div class="audio-this-time">00:00</div>
+                    <div class="audio-count-time">00:00</div>
+                    <div class="audio-setbacks">
+                        <i class="audio-this-setbacks">
+                            <span class="audio-backs-btn"></span>
+                        </i>
+                        <span class="audio-cache-setbacks">
+							</span>
+                    </div>
+                </div>
+            </div>
+            <div class="audio-btn">
+                <div class="audio-select">
+                    <div class="audio-prev"></div>
+                    <div class="audio-play"></div>
+                    <div class="audio-next"></div>
+                    <div class="audio-menu"></div>
+                    <div class="audio-volume"></div>
+                </div>
+                <div class="audio-set-volume">
+                    <div class="volume-box">
+                        <i><span></span></i>
+                    </div>
+                </div>
+                <div class="audio-list">
+                    <div class="audio-list-head">
+                        <p>☺随心听</p>
+                        <span class="menu-close">关闭</span>
+                    </div>
+                    <ul class="audio-inline">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<%--<script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>--%>
 <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 <script type="text/javascript" src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
@@ -216,4 +262,49 @@
     });
 </script>
 </body>
+
+<script type="text/javascript" src="js/audio.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var song = [
+            {
+                'cover' : 'images/shzy.jpg',
+                'src' : 'music/张楚 - 社会主义好.mp3',
+                'title' : '张楚 - 社会主义好'
+            },
+            {
+                'cover' : 'images/kim.jpg',
+                'src' : 'music/弹死你.mp3',
+                'title' : '弹死你'
+            },
+            {
+                'cover' : 'images/meimei.jpg',
+                'src' : 'music/Taylor Swift - Love Story.mp3',
+                'title' : 'Taylor Swift - Love Story.mp3'
+            },
+        ];
+
+        var audioFn = audioPlay({
+            song : song,
+            autoPlay : true  //是否立即播放第一首，autoPlay为true且song为空，会alert文本提示并退出
+        });
+
+
+
+        /* 暂停播放 */
+        //audioFn.stopAudio();
+
+        /* 开启播放 */
+        //audioFn.playAudio();
+
+        /* 选择歌单中索引为3的曲目(索引是从0开始的)，第二个参数true立即播放该曲目，false则不播放 */
+        //audioFn.selectMenu(3,true);
+
+        /* 查看歌单中的曲目 */
+        //console.log(audioFn.song);
+
+        /* 当前播放曲目的对象 */
+        //console.log(audioFn.audio);
+    });
+</script>
 </html>
